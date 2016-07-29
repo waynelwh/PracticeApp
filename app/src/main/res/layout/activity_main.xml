@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="polyu.comp.wayne.practiceapp.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/assignmentIcon"
+                android:src="@drawable/ic_assignment"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Result :"
+                android:id="@+id/resultLabel"
+                android:gravity="center_vertical"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/log"
+            android:layout_weight="0.95"
+            android:maxLines = "18"
+            android:scrollbars = "vertical"
+            android:scrollIndicators="right"
+            android:textSize="12dp"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:visibility="gone"
+            android:id="@+id/colors">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/blackColor"
+                android:background="#000000"
+                android:onClick="changeColor"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/redColor"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="changeColor"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/orangeColor"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="changeColor"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/greenColor"
+                android:background="@android:color/holo_green_light"
+                android:onClick="changeColor"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/blueColor"
+                android:background="@android:color/holo_blue_dark"
+                android:onClick="changeColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:id="@+id/buttons"
+            android:visibility="visible">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/largerButton"
+                android:background="@drawable/ic_zoom_in"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/smallerButton"
+                android:background="@drawable/ic_zoom_out"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/colorButton"
+                android:background="@drawable/ic_color"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/copyButton"
+                android:background="@drawable/ic_copy"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/clearButton"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_clear"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/recordButton"
+            android:layout_weight="0.09"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:gravity="center"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+</RelativeLayout>
